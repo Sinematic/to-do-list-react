@@ -1,0 +1,18 @@
+.title {
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    color: #615abe;
+    background-color: #FAFAFA;
+    width: fit-content;
+    border-radius: 20px;
+    margin-bottom: 120px;
+
+}
+
+header {
+    padding-top: 120px;
+    background-image: url(../assets/paysage-foret-et-montagnes.webp);
+    background-size: cover;
+    background-position: 20% 50%;
+}

@@ -1,0 +1,30 @@
+h2 {
+    margin: 0 auto;
+    color: #615abe;
+    padding-bottom: 30px;
+}
+
+button {
+    color: #615abe;
+    background-color: #FAFAFA;
+    border-color: #615abe;
+    padding: 8px 14px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 20px;
+}
+
+button:hover {
+    color: #FAFAFA;
+    background-color: #24282C;
+    border-color: transparent;
+}
+
+.todo__ul {
+    text-align: center;
+}
