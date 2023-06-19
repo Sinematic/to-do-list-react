@@ -5,6 +5,8 @@ h2 {
 }
 
 button {
+    display: block;
+    margin: auto;
     color: #615abe;
     background-color: #FAFAFA;
     border-color: #615abe;
@@ -17,6 +19,7 @@ button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 button:hover {

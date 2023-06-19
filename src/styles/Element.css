@@ -1,0 +1,9 @@
+p:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: auto;
+    width: fit-content;
+    padding: 12px;
+}

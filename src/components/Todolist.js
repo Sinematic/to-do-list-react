@@ -4,28 +4,47 @@ import Element from "./Element"
 
 function Todolist() {
 
-    const [task, setTask] = useState()
+    const [tasks, setTasks] = useState([])
 
-    function addTask() {
+    const addTask = () => {
 
         const taskName = prompt("Que devez-vous faire ?")
 
         if (taskName) {
-            setTask(taskName)
+
+            const task = {
+                "isDone" : false,
+                "text" : taskName
+            }
+            
+            setTasks([...tasks, task])
         }
     }
 
-    function toggleElement() {
+    const deleteTask = () => {
 
+        const updatedTasks = tasks.filter(task => !task.isDone)
+        console.log(updatedTasks)
+        setTasks(updatedTasks)
     }
+    
+    const toggleElement = (index) => {
+
+        const updatedTasks = [...tasks]
+        updatedTasks[index].isDone = !updatedTasks[index].isDone
+        setTasks(updatedTasks)
+    }          
 
     return (
         <section>
             <h2>To-do-list :</h2>
             <button onClick={addTask}>Ajouter une tâche ✅</button>
-            <ul className="todo__ul">
-                {task && <li onClick={toggleElement}>{ task && <Element value="false" />} {task}</li>}
-            </ul>
+            {tasks.length ? <button onClick={deleteTask} >Supprimer les tâches effectuées</button> : null}
+            {tasks.length ? <ul className="todo__ul">
+                {tasks.map((task, index) => 
+                    <Element key={task.text} isDone={task.isDone} text={task.text} onClick={() => toggleElement(index)} />
+                )}
+            </ul> : null}
         </section>
     )
 }

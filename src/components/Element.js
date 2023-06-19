@@ -1,13 +1,11 @@
-function Element() {
+import "../styles/Element.css"
 
-    const [toDo, setTodo] = false
+function Element(props) {
 
-    function toggleState() {
-        toDo === true ? setTodo(false) : setTodo(true) 
-    }
+    const toggleElement = () =>  props.onClick()
 
     return (
-        <p onClick={toggleState}>{(toDo  && <span>✅</span>)(!toDo && <span>✖️</span>)}</p>
+        <p onClick={toggleElement}>{(props.isDone ? <span>✅ </span> : <span>✖️ </span>)}{props.text}</p>
     )
 }
 
